@@ -1,0 +1,16 @@
+# dependencies
+/node_modules/
+
+# misc
+.DS_Store
+
+# logs
+*.log
+
+# build / cache / artifacts
+/dist/
+/cache/
+/coverage/
+/.tools/
+*.tsbuildinfo
+*.tgz

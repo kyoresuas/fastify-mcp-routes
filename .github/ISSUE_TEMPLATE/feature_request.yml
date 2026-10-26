@@ -1,0 +1,52 @@
+name: Feature request
+description: Suggest an improvement or a new integration
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What are you trying to accomplish, and who benefits from it?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Describe the option, behavior, or documentation change you would like.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe current workarounds or other approaches.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Route selection and policy
+        - Tool names and schemas
+        - Calling routes
+        - Progressive mode
+        - Statistics
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and did not find the same request.
+          required: true
+        - label: I have not included credentials or private route schemas.
+          required: true

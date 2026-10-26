@@ -1,0 +1,24 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      dev-dependencies:
+        dependency-type: "development"
+    ignore:
+      # typescript-eslint пока не поддерживает следующий мажор TypeScript
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
+      # типы держим под минимальную версию Node из engines
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+    labels: ["dependencies"]
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels: ["dependencies", "ci"]

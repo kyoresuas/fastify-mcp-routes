@@ -1,0 +1,83 @@
+{
+  "name": "fastify-mcp-routes",
+  "version": "0.1.0",
+  "description": "Fastify 5 plugin that exposes your routes as MCP tools over Streamable HTTP, no codegen and no OpenAPI file",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README_RU.md"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyoresuas/fastify-mcp-routes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kyoresuas/fastify-mcp-routes/issues"
+  },
+  "homepage": "https://github.com/kyoresuas/fastify-mcp-routes#readme",
+  "keywords": [
+    "fastify",
+    "fastify-plugin",
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "streamable-http",
+    "ai-agents",
+    "claude",
+    "tools",
+    "llm"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "lint": "npx eslint . --max-warnings=0",
+    "test": "npm run test:typecheck && vitest run",
+    "test:typecheck": "tsc --project tsconfig.json",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "build": "tsc --project tsconfig.build.json && tsc-alias --project tsconfig.build.json --resolve-full-paths",
+    "bench": "tsx bench/run.ts",
+    "docs:bench": "tsx scripts/render-bench.ts",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/node": "2.1.2",
+    "@modelcontextprotocol/server": "2.4.0",
+    "fastify-plugin": "^6.0.1"
+  },
+  "peerDependencies": {
+    "@fastify/swagger": ">=9.0.0",
+    "fastify": "^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@fastify/swagger": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@fastify/swagger": "^9.9.2",
+    "@modelcontextprotocol/client": "2.4.0",
+    "@types/node": "^22.20.5",
+    "@vitest/coverage-v8": "^5.0.3",
+    "eslint": "^10.12.0",
+    "fastify": "^5.12.7",
+    "tsc-alias": "^1.9.9",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.71.0",
+    "vitest": "^5.0.3"
+  }
+}

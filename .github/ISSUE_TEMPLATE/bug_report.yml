@@ -1,0 +1,82 @@
+name: Bug report
+description: Report reproducible behavior that is not working as expected
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Remove all API keys, tokens, production URLs, and private route schemas before submitting.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem and its impact.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include the plugin options and the smallest route definitions that show the problem.
+      placeholder: |
+        1. Register the plugin with ...
+        2. Add a route ...
+        3. Call the tool ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options:
+        - tools
+        - progressive
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Versions
+      description: fastify-mcp-routes, Fastify, and Node.js versions.
+      placeholder: fastify-mcp-routes 0.1.0, Fastify 5.12.7, Node.js 22.12.0
+    validations:
+      required: true
+
+  - type: input
+    id: client
+    attributes:
+      label: MCP client
+      description: The client that connects to the endpoint, with its version.
+      placeholder: Claude Code 2.0.0
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs or responses
+      description: Use a code block and remove all secrets and identifying data.
+      render: shell
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety checks
+      options:
+        - label: I searched existing issues for the same problem.
+          required: true
+        - label: I removed API keys, tokens, production URLs, and private route schemas.
+          required: true
+        - label: This is not a security vulnerability.
+          required: true

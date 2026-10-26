@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="852" height="232" viewBox="0 0 852 232" role="img" aria-labelledby="title desc">
+  <title id="title">Output of npm run bench</title>
+  <desc id="desc">| Routes | Tools mode, tools | Tools mode, tokens | Progressive, tools | Progressive, tokens | Ratio |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 5 | 5 | 337 | 3 | 236 | 1.4x |
+| 50 | 50 | 3373 | 3 | 236 | 14.3x |
+| 200 | 200 | 13518 | 3 | 236 | 57.3x |</desc>
+  <style>
+    text { font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; white-space: pre; }
+    .win { fill: #f6f8fa; stroke: #d0d7de; }
+    .bar { fill: #eaeef2; }
+    .rule { stroke: #d0d7de; }
+    .t { fill: #1f2328; }
+    .h { fill: #59636e; font-weight: 700; }
+    .g { fill: #1a7f37; }
+    .b { fill: #0969da; }
+    @media (prefers-color-scheme: dark) {
+      .win { fill: #0d1117; stroke: #30363d; }
+      .bar { fill: #161b22; }
+      .rule { stroke: #30363d; }
+      .t { fill: #e6edf3; }
+      .h { fill: #8b949e; }
+      .g { fill: #3fb950; }
+      .b { fill: #79c0ff; }
+    }
+  </style>
+  <rect class="win" x="0.5" y="0.5" width="851" height="231" rx="10"/>
+  <path class="bar" d="M0.5 38V10.5a10 10 0 0 1 10-10h831a10 10 0 0 1 10 10V38z"/>
+  <circle cx="22" cy="19" r="6" fill="#ff5f57"/>
+  <circle cx="42" cy="19" r="6" fill="#febc2e"/>
+  <circle cx="62" cy="19" r="6" fill="#28c840"/>
+  <line class="rule" x1="24" y1="132" x2="828" y2="132"/>
+  <text class="g" x="24.0" y="71">$</text>
+  <text class="t" x="39.6" y="71">npm run bench</text>
+  <text class="h" x="24.0" y="115">Routes</text>
+  <text class="h" x="102.0" y="115">Tools mode, tools</text>
+  <text class="h" x="265.8" y="115">Tools mode, tokens</text>
+  <text class="h" x="437.4" y="115">Progressive, tools</text>
+  <text class="h" x="609.0" y="115">Progressive, tokens</text>
+  <text class="h" x="788.4" y="115">Ratio</text>
+  <text class="t" x="63.0" y="159">5</text>
+  <text class="t" x="226.8" y="159">5</text>
+  <text class="t" x="382.8" y="159">337</text>
+  <text class="g" x="570.0" y="159">3</text>
+  <text class="g" x="733.8" y="159">236</text>
+  <text class="b" x="796.2" y="159">1.4x</text>
+  <text class="t" x="55.2" y="181">50</text>
+  <text class="t" x="219.0" y="181">50</text>
+  <text class="t" x="375.0" y="181">3373</text>
+  <text class="g" x="570.0" y="181">3</text>
+  <text class="g" x="733.8" y="181">236</text>
+  <text class="b" x="788.4" y="181">14.3x</text>
+  <text class="t" x="47.4" y="203">200</text>
+  <text class="t" x="211.2" y="203">200</text>
+  <text class="t" x="367.2" y="203">13518</text>
+  <text class="g" x="570.0" y="203">3</text>
+  <text class="g" x="733.8" y="203">236</text>
+  <text class="b" x="788.4" y="203">57.3x</text>
+</svg>
